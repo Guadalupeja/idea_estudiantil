@@ -1,34 +1,57 @@
 :root {
-    --FuenteHeading: 'PT Sans', sans-serif;
-    --FuenteParrafos: 'Open Sans', sans-serif;
+ 
+    --FuenteParrafos: 'Segoe UI';
+    --Fuentetitulos: 'Berlin Sans FB';
    
     --Fentenav: 'Nunito', sans-serif;
+    --FuenteTexto: 'Nunito' ;
     
     --primario: #013265; 
-    --gris: #e1e1e1;
+    --secundario: #F6D95B;
     --blanco: #ffffff;
     --negro: #000000;
 
 }
 
 
+html {
+ 
+    box-sizing: border-box;
+    font-size: 62.5%; /*1 rem=10px*/
+}
 *, *:before, *:after {
     box-sizing: inherit;
 
 }
-.html {
-    box-sizing: border-box;
-    font-size: 62.5%; /*1 rem=10px*/
+body {
+    max-width: 136.6rem;
+    font-family: var(--FuenteParrafos);
+   
+  
+    line-height: 2;
+}
+h2 {
+font-family: var(--Fuentetitulos);
+font-weight: normal;
 }
 
-body {
+
+p {
+    font-family: var(--FuenteParrafos);
+    font-weight: normal;
+
+}
+header {
+    margin: 0;
+   
    
 }
 /*globales*/
 .contenedor {
-    max-width: 1366px;
-    width: 90%;
+   
+  
     margin: 0 auto;
+    
 }
 a {
     text-decoration: none;
@@ -47,39 +70,176 @@ img {
 }
 
 .barra {
-
-    padding-top: 3rem;
+ 
     background-color: var(--primario);
   
 }
 .logo img{
     display: block;
-    margin:  auto;
+    margin: 0 auto;
+   
 }
 
 .navegacion__enlace {
+    width: 100%;
     display: block;
     text-align: center;
-    padding: 2.7rem;
     color: var(--blanco);
+  
  
 }
 .navegacion {
     font-family: var(--Fentenav);
-    font-size: 2rem;
+    padding: 0;
 
 }
+.header__texto {
+   margin: auto;
+    height: 46.2rem;
+  background-image: url(/img/Imagen2.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+background-position:center;
+  position: relative;
+ 
+}
+.header__texto-titulo {
+    position: absolute;
+    line-height: 3.2rem;
+    margin: 5.7rem 24rem auto 9.2rem;
+}
+.header__texto-parrafo{
+    position: absolute;
+    text-align: center;
+    line-height: 1.7rem;
+    margin: 20rem 15.4rem 16.2rem 7.7rem;
+}
+i {
+   
+    font-size: 3.6rem;
+    color: var(--primario);
+}
+.iconos {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding: 4rem;
+  }
+  .descripcion {
+ 
+    background-color: var(--secundario);
+    height: auto;
+    display:grid;
+    gap: 3rem;
+    justify-items: center;
+    padding: 2rem;
+   
+}
+.descripcion__texto {
+   font-family: var(--FuenteTexto);
+   font-size: 2.5rem;
+ 
+   line-height: 3.4rem;
+   margin: 0 auto;
+  
+}
+.descripcion__imagen img {
+width: 28.98rem;
+height: 19.39rem;
+
+
+}
+
+
+.TopUniversidades h2{
+    text-align: center;
+    font-size: 4.5rem;
+ 
+}
+.TopUniversidades__contenido {
+    min-height: 99.3rem;
+    background-color: var(--primario);
+    display:grid;
+                grid-template-rows: 1fr;
+    gap: 2rem;
+
+    padding: 2rem;
+  
+}
+.universidades {
+    width: 37rem;
+    height: 75.7rem;
+    background-color: var(--blanco);
+    display: row;
+    border-radius: 2.5rem;
+   
+    align-items: center;
+    
+}
+.universidades__imagen-universidad{
+    padding: 3rem 2.5rem;
+
+   
+}
+.universidades__imagen-escudo{
+    width: 14.7rem;
+height: 14.6rem;
+   margin: -12rem auto auto 11.2rem;
+  
+}
+.universidades__titulo {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    font-size: 3rem;
+    font-family: var(--Fuentetitulos);
+    font-weight: normal;
+    line-height: 3.3rem;
+}
+.icon-principal {
+    width: 22.7rem;
+    height: 17.3rem;
+    display: row;
+    margin: 2rem auto auto 6rem;
+   
+
+}
+.icono__universidad {
+    display: flex;
+    align-items: center;
+    line-height: 2.7rem;
+    margin-top: 2rem;
+  
+   
+    
+}
+.icono__universidad-icono i{
+    
+    font-size: 2.9rem;
+  margin-right: 1rem;
+}
+.icono__universidad-descripcion {
+    font-size: 1.9rem;
+    font-family: var(--FuenteTexto, italic) ;
+    margin: 0;
+}
+
 @media (min-width: 768px){
     .contenedor {
       
-        width: 136.6rem;
-        max-height: 7.1rem;
+   width: auto;
         
        
     }
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-left: 4.5rem;
+        margin:  1.5rem, auto, auto, 4.5rem;
+    }
     .barra  {
         padding-top: 0;
-        height: 71px;
+        height: 7.1rem;
         display: flex;
         justify-content: space-between;
       
@@ -87,12 +247,162 @@ img {
     }
     .navegacion{
         display: flex;
-        justify-content: space-between;
+       
         background-color: var(--primario);
     }
-    .logo img {
-        margin: 15px 1153px 11px 45px;
-
+    .navegacion__enlace {
+        display: flex;
+       margin-right: 2.7rem;
+       align-items: center;
+        color: var(--blanco);
+        font-size: 2rem;
+     
     }
 
+    .header__texto {
+        margin: 0;
+        width: auto;
+        height: 76.2rem;
+      background-image: url(/img/Imagen2.png);
+      position: relative;
+    }
+    .header__texto-titulo {
+        position: absolute;
+        font-size: 7.5rem;
+        line-height: 8.2rem;
+        margin: 11.4rem 51rem auto 9.2rem;
+    }
+    .header__texto-parrafo{
+        position: absolute;
+        text-align: center;
+        font-size: 3.5rem;
+        line-height: 4.7rem;
+        margin: 46rem 75.4rem 16.2rem 15.7rem;
+    }
+    .descripcion {
+        height: 36.54rem;
+        background-color: var(--secundario);
+        display: flex;
+       
+    }
+   .descripcion__texto {
+       font-family: var(--FuenteTexto);
+       font-size: 2.5rem;
+       padding: 13.4rem 14.4rem 11.54rem 7.61rem;
+       line-height: 3.4rem;
+       margin: 0;
+      
+   }
+   .descripcion__imagen {
+    width: 28.98rem;
+    height: 19.39rem;
+    margin: 8.41rem 7.61rem 8.73rem 19.6rem;
+   
+}
+.TopUniversidades {
+    margin: 0;
+    padding: 0;
+}
+
+.TopUniversidades h2{
+    text-align: center;
+    font-size: 4.5rem;
+ 
+}
+.TopUniversidades__contenido {
+   
+    height: 99.3rem;
+    background-color: var(--primario);
+    padding: 0;
+    margin: 0;
+    
+   
+   
+    
+  
+}
+.contenedor_universidades {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+padding: 0;
+gap: 0;
+    margin: 9.1rem 5.7rem 14.5rem 5.7rem;
+    column-gap: 7.1rem;
+   
+}
+
+.universidades {
+    width: 37rem;
+    height: 75.7rem;
+    background-color: var(--blanco);
+    display: row;
+    border-radius: 2.5rem;
+  
+   
+   
+    align-items: center;
+    
+
+    
+}
+.universidades__imagen-universidad{
+    padding: 3rem 2.5rem;
+
+   
+}
+.universidades__imagen-escudo{
+    width: 14.7rem;
+height: 14.6rem;
+   margin: -12rem auto auto 11.2rem;
+  
+}
+.universidades__titulo {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    font-size: 3rem;
+    font-family: var(--Fuentetitulos);
+    font-weight: normal;
+    line-height: 3.3rem;
+}
+.icon-principal {
+    width: 22.7rem;
+    height: 17.3rem;
+    display: row;
+    margin: 2rem auto auto 6rem;
+   
+
+}
+.icono__universidad {
+    display: flex;
+    align-items: center;
+    line-height: 2.7rem;
+    margin-top: 2rem;
+  
+   
+    
+}
+.icono__universidad-icono i{
+    
+    font-size: 2.9rem;
+  margin-right: 1rem;
+}
+.icono__universidad-descripcion {
+    font-size: 1.9rem;
+    font-family: var(--FuenteTexto, italic) ;
+    margin: 0;
+}
+.boton {
+    background-color: var(--primario);       
+    color: var(--blanco);
+    font-family: var(--FuenteTexto);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius:2.7rem;
+    width: 80%;
+    text-align: center;
+    border: none;
+    }
 }
